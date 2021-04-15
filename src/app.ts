@@ -3,7 +3,11 @@ function invertir(cadena: string) {
     for(let i: number = cadena.length; i >= 0; i--) {
         cadIn += cadena.charAt(i);
     }
-    return cadIn;
+    if(cadIn == cadena) {
+        return true;
+    } else {
+        return false;
+    }
 }
 let cad: string = "this is a sample string";
 console.log(invertir(cad));
