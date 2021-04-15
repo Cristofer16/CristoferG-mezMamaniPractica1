@@ -1,13 +1,16 @@
-function grande(arre: number[]) {
-    let x: number = arre.length - 2;
-    let max: number = arre[0] * arre[1];
-    for(let i: number = 1; i <= x; i++) {
-        let m: number = arre[i] * arre[i+1];
-        if(m > max) {
-            max = m;
+function agregar(arre: number[]) {
+    let x: number[] = arre.sort();
+    let max: number = arre.length-1;
+    let m: number = x[0];
+    let cont: number = 0;
+    for(let i: number = 0; i <= max; i++) {
+        while(m != x[i]) {
+            cont++;
+            m++;
         }
+        m++;
     }
-    return max;
+    return cont;
 }
-let a: number[] = [1, 0, 1, 0, 1000];
-console.log(grande(a));
+let a: number[] =[0, 3];
+console.log(agregar(a));
