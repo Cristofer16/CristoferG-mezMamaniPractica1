@@ -1,14 +1,9 @@
-let a: number = 83;
-function primo(a: number) {
-    for (let i: number = 2; i < a/2; i++) {
-        if (a%i == 0) {
-            return false;
-        }
+function invertir(cadena: string) {
+    let cadIn: string = "";
+    for(let i: number = cadena.length; i >= 0; i--) {
+        cadIn += cadena.charAt(i);
     }
-    return true;
+    return cadIn;
 }
-if (primo(a)) {
-    console.log("Es primo");
-} else {
-    console.log("No es primo");
-}
+let cad: string = "this is a sample string";
+console.log(invertir(cad));
